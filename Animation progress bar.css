@@ -1,0 +1,115 @@
+*{
+   box-sizing: border-box;
+}
+.skill-list{
+   background-color: tomato;
+   padding:20px;
+}
+.skill-list li{
+   text-decoration:none;
+   text-transform: uppercase;
+   list-style-type:none;
+   margin: 50px 0;
+   font-weight: 900;
+   position: relative;
+   
+}
+
+
+
+.skill-list li::before{
+   content: " ";
+   position: absolute;
+ /*  top: 25px;*/
+   top: calc(100% + 5px); 
+   left:0;
+   background-color:#7E9B90;
+   width:100%; 
+   height: 25px;
+   border-radius:1000px;
+   
+   
+}
+
+.skill-list li::after{
+   content: " ";
+   position: absolute;
+  /* top: 25px; */
+   top: calc(100% + 5px); 
+   left:0;
+   background-color: #14ADCB;
+   width:100%; 
+   height: 25px;
+   border-radius:1000px;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   
+   
+}
+.skill-list li.facebook::after{
+   animation-name: face;
+}
+@keyframes face{
+   from{
+      width:0%;
+   }
+   to{
+      width:95%;
+      background-color: #5614CB;
+      
+   }
+}
+.messenger::after{
+   animation-name: mess;
+}
+@keyframes mess{
+   from{
+      width:0%;
+   }
+   to{
+      width:92%;
+      background-color: bisque;
+   }
+   
+   
+}
+.youtube::after{
+   animation-name: you;
+}
+@keyframes you{
+   from{
+      width:0;
+   }
+   to{
+      width:90%;
+      background-color: red;
+   }
+}
+
+.tiktok::after{
+   animation-name: tik;
+}
+@keyframes tik{
+   from{
+      width: 0;
+   }
+   to{
+      width: 80%;
+      background-color: #47CB14;
+   }
+}
+
+
+.instra::after{
+   animation-name: ins;
+}
+@keyframes ins{
+   from{
+      width: 0;
+   }
+   to{
+      width: 70%;
+      background-color: #0C1E04;
+   }
+}
